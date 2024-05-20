@@ -1,0 +1,47 @@
+.items {
+    padding: 0 5%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.disable {
+    display: none;
+}
+
+
+.icon {
+    
+    img {
+        width: 65px;
+    }
+}
+.info {
+    padding-left: 5%;
+    width: 100%;
+    p {
+        cursor: pointer;
+        user-select: none;
+        font-weight: 500;
+    }
+    .remove {
+        color: #a50101;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+.change {
+    width: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        user-select: none;
+    }
+}

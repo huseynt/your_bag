@@ -8,7 +8,7 @@ const Items = (props: any) => {
   // remove phone ------------------------------
   const [count, setCount] = useState(1)
   function remove(e:any) {
-    setCount(0) 
+    setCount(0)
     phones[e.target.id-1].count= 0
     sum()
   }
@@ -21,11 +21,11 @@ const Items = (props: any) => {
   }
   // count - ------------------------------------
   function changeNumDescend(e:any) {
-    sum()
     if (count>0) {
       const i = count-1
       setCount(i)
       phones[e.target.id-1].count= i
+      sum()
     }
     else {
       remove(e)

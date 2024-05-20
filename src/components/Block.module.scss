@@ -1,9 +1,8 @@
 .block {
     max-width: 600px;
-    height: 600px;
-    margin: 50px auto;
-    padding-top: 10px;
-    background-color: #177bc351;
+    margin: 40px auto;
+    padding: 10px 0 20px;
+    background-color: #ffffff;
     font-family: monospace;
     border-radius: 15px;
 
@@ -14,7 +13,8 @@
     .bottom {
 
         .total {
-            padding: 0 7%;
+            padding: 0;
+            margin: 0 30px;
             display: flex;
             justify-content: space-between;
             border-top: 1px solid #00000078;
@@ -47,6 +47,6 @@
     }
 }
 
-.itemsBlock {
+.itemsDisable {
     display: none;
 }

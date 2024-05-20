@@ -4,20 +4,17 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
-
-  // const [phoneseven,setPhoneSeven] = useState(1)
-  // const [phoneegiht,setPhoneEgiht] = useState(1)
-  // const [phonepixel,setPhonePixel] = useState(1)
-  // const [phoneredmi,setPhoneRedmi] = useState(1)
-  
-
   const [ sum, setSum] = useState(0)
+  const [ countPhone, setCountPhone] = useState(0)
 
   return (
     <>
-    <Header/>
-    <Block  sum={sum} setSum={setSum}/>
-    <p>{sum}</p>
+    <Header count={countPhone}/>
+    <Block  
+    sum={sum} 
+    setSum={setSum} 
+    countPhone={countPhone} 
+    setCountPhone={setCountPhone}/>
     </>
   )
 }

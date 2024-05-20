@@ -4,44 +4,66 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .icon {
+    
+        img {
+            width: 65px;
+        }
+    }
+    .info {
+        padding-left: 5%;
+        width: 100%;
+        p {
+            cursor: pointer;
+            user-select: none;
+            font-weight: 500;
+        }
+        .remove {
+            color: #a50101;
+            cursor: pointer;
+            user-select: none;
+        }
+        .phoneName {
+            font-weight: 600;
+            font-size: 15px;
+        }
+    }
+    .change {
+        width: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .count {
+            margin: 0;
+            padding: 0;
+        }
+    
+        p:not(.count) {
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 50%;
+            padding: 1px 5px;
+            &:hover {
+                color: #000000;
+                background-color: #08a4ff5d;
+                border-radius: 50%;
+                padding: 1px 5px;
+            }
+        }
+    }
 }
+
+
+
+
+
+
 .disable {
     display: none;
-}
-
-
-.icon {
-    
-    img {
-        width: 65px;
-    }
-}
-.info {
-    padding-left: 5%;
-    width: 100%;
-    p {
-        cursor: pointer;
-        user-select: none;
-        font-weight: 500;
-    }
-    .remove {
-        color: #a50101;
-        cursor: pointer;
-        user-select: none;
-    }
-}
-.change {
-    width: 20px;
-    font-size: 18px;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    p {
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-        user-select: none;
-    }
 }

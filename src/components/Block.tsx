@@ -1,26 +1,18 @@
 import style from './Block.module.scss'
 import {phones} from '../db/data'
 import Items from './Items'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Block = (props:any) => {
-  console.log()
 
     const [clear, setClear] = useState(false)
-    const [sum, setSum] = useState(0)
-
     function clearItems() {
       setClear(true)
       phones.map(x=> x.count=0)
+      props.setSum(0)
+      props.setCountPhone(0)
     }
-    useEffect(()=> {
-      let a = 0
-      for(let i =0; i<phones.length;i++) {
-        a+=phones[i].count
-      }
-      setSum(a)
-      console.log(sum)
-    },[])
+
 
 
 
@@ -28,7 +20,7 @@ const Block = (props:any) => {
     <div className={style.block}>
         <h3 className={style.head}>YOUR BAG</h3>
 
-        <div className={clear ? style.itemsBlock: ''}>
+        <div className={clear ? style.itemsDisable: ''}>
             {phones.map((phones) => {
               return <Items 
               id={phones.id} 
@@ -37,16 +29,18 @@ const Block = (props:any) => {
               price={phones.price} 
               url={phones.url} 
               count={phones.count}
-              setSum={props.setSum}/>
+              setSum={props.setSum}
+              countPhone={props.countPhone} 
+              setCountPhone={props.setCountPhone}/>
             })}
         </div>
 
         <div className={style.bottom}>
             <div className={style.total}>
                 <p>Total</p>
-                <p>{sum}</p>
+                <p>${Math.floor(props.sum*100)/100}</p>
             </div>
-            
+
             <p onClick={clearItems} className={style.clear}>Clear Card</p>
         </div>
 
